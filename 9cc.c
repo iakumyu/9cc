@@ -16,14 +16,17 @@ int main(int argc, char **argv)
     printf("_main:\n");
     printf("  mov rax, %ld\n", strtol(p, &p, 10));
 
-    while (*p) {
-        if (*p == '+') {
+    while (*p)
+    {
+        if (*p == '+')
+        {
             p++;
             printf("  add rax, %ld\n", strtol(p, &p, 10));
             continue;
         }
 
-        if (*p == '-') {
+        if (*p == '-')
+        {
             p++;
             printf("  sub rax, %ld\n", strtol(p, &p, 10));
             continue;
